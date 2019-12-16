@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://addons/mdp_panel/graph_edit.gd" type="Script" id=1]
+[ext_resource path="res://addons/mdp_panel/components/state/state.tscn" type="PackedScene" id=2]
+[ext_resource path="res://addons/mdp_panel/components/action/action.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/mdp_panel/components/reward/reward.tscn" type="PackedScene" id=4]
+
+[node name="GraphEdit" type="GraphEdit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+right_disconnects = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="StartState" parent="." instance=ExtResource( 2 )]
+margin_right = -924.0
+margin_bottom = -530.0
+mouse_filter = 1
+slot/0/left_enabled = false
+slot/0/left_type = 3
+slot/0/left_color = Color( 1, 0.65, 0, 1 )
+slot/0/right_type = 1
+slot/0/right_color = Color( 0.63, 0.13, 0.94, 1 )
+is_initial = true
+is_terminal = false
+
+[node name="Action" parent="." instance=ExtResource( 3 )]
+margin_right = -924.0
+margin_bottom = -530.0
+mouse_filter = 1
+slot/0/left_type = 1
+slot/0/left_color = Color( 0.63, 0.13, 0.94, 1 )
+slot/0/right_type = 2
+slot/0/right_color = Color( 0, 1, 1, 1 )
+
+[node name="Reward" parent="." instance=ExtResource( 4 )]
+margin_right = -924.0
+margin_bottom = -530.0
+mouse_filter = 1
+slot/0/left_enabled = true
+slot/0/left_type = 2
+slot/0/left_color = Color( 0, 1, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 3
+slot/0/right_color = Color( 1, 0.65, 0, 1 )
+reward = -5.0
+
+[node name="EndState" parent="." instance=ExtResource( 2 )]
+margin_right = -924.0
+margin_bottom = -530.0
+mouse_filter = 1
+slot/0/left_type = 3
+slot/0/left_color = Color( 1, 0.65, 0, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 1
+slot/0/right_color = Color( 0.63, 0.13, 0.94, 1 )
+is_initial = false
+is_terminal = true
+[connection signal="connection_request" from="." to="." method="_on_connection_request"]
+[connection signal="disconnection_request" from="." to="." method="_on_disconnection_request"]

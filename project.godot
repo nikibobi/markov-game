@@ -1,0 +1,51 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "MarkovNode",
+"class": "ActionNode",
+"language": "GDScript",
+"path": "res://addons/mdp_panel/components/action/action.gd"
+}, {
+"base": "GraphNode",
+"class": "MarkovNode",
+"language": "GDScript",
+"path": "res://addons/mdp_panel/components/node/node.gd"
+}, {
+"base": "MarkovNode",
+"class": "RewardNode",
+"language": "GDScript",
+"path": "res://addons/mdp_panel/components/reward/reward.gd"
+}, {
+"base": "MarkovNode",
+"class": "StateNode",
+"language": "GDScript",
+"path": "res://addons/mdp_panel/components/state/state.gd"
+} ]
+_global_script_class_icons={
+"ActionNode": "",
+"MarkovNode": "",
+"RewardNode": "",
+"StateNode": ""
+}
+
+[application]
+
+config/name="Markov"
+run/main_scene="res://addons/mdp_panel/graph_edit.tscn"
+config/icon="res://icon.png"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "mdp_panel" )
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

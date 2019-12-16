@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://addons/mdp_panel/components/node/node.tscn" type="PackedScene" id=1]
+[ext_resource path="res://addons/mdp_panel/components/state/state.gd" type="Script" id=2]
+
+[node name="StateNode" instance=ExtResource( 1 )]
+margin_right = -960.0
+title = "State"
+slot/0/left_enabled = true
+slot/0/left_type = 1
+slot/0/left_color = Color( 0.63, 0.13, 0.94, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 2
+slot/0/right_color = Color( 1, 1, 0, 1 )
+script = ExtResource( 2 )
