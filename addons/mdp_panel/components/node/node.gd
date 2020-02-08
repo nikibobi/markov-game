@@ -14,5 +14,5 @@ var slot_colors: Dictionary = {
 	SlotType.REWARD_TO_STATE: Color.orange
 }
 
-func _on_resize_request(new_minsize) -> void:
+func _on_resize_request(new_minsize: Vector2) -> void:
 	self.rect_size = new_minsize

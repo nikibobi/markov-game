@@ -25,5 +25,5 @@ func set_reward(value: float) -> void:
 	reward = value
 	emit_signal('reward_changed', value)
 
-func _set_label(new_value) -> void:
+func _set_label(new_value: float) -> void:
 	$Slot.text = str(new_value)
