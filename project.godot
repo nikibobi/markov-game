@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "MarkovNode",
 "class": "ActionNode",
 "language": "GDScript",
-"path": "res://addons/mdp_panel/components/action/action.gd"
+"path": "res://addons/mdp_panel/components/node/action/action.gd"
 }, {
 "base": "GraphNode",
 "class": "MarkovNode",
@@ -22,12 +22,12 @@ _global_script_classes=[ {
 "base": "MarkovNode",
 "class": "RewardNode",
 "language": "GDScript",
-"path": "res://addons/mdp_panel/components/reward/reward.gd"
+"path": "res://addons/mdp_panel/components/node/reward/reward.gd"
 }, {
 "base": "MarkovNode",
 "class": "StateNode",
 "language": "GDScript",
-"path": "res://addons/mdp_panel/components/state/state.gd"
+"path": "res://addons/mdp_panel/components/node/state/state.gd"
 } ]
 _global_script_class_icons={
 "ActionNode": "",
